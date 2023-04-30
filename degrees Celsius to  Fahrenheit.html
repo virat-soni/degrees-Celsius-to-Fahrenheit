@@ -1,0 +1,100 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         /* * {
+            padding:0;
+            margin: 0;
+            background-color:honeydew;
+        }
+        div{
+            display: grid;
+            width: 500;
+            height: 100;
+            margin: auto;
+            padding: 40vh;}
+        h1{
+            font-size: 30.7;
+        }     
+
+        *{
+            margin: 0;padding: 0;
+            box-sizing: border-box;
+        } */
+
+        .container{
+            width: 100vw;
+            height: 100vh;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            font-family: cursive;
+
+        }
+
+        .main{
+            border: 2px solid green;
+            padding: 30px;
+            border-radius: 5px;
+            background-color:lightblue;
+
+            
+        }
+        input{
+            border-radius: 5px;
+            margin-left: 20;
+            border: none;
+            padding: 5;
+            box-shadow: 1px 1px 4px  ;
+        }
+
+        input:focus{
+            outline: none;
+            border: 1px solid green;
+        }
+        button{
+            background-color:green;
+            opacity: 0.7;
+            border-radius: 5px;
+            border: none;
+            padding: 5;
+            color: aliceblue;
+            margin-left: 14;
+
+        }
+        .g1{
+            width: 60;
+        }
+    </style>
+
+    
+</head>
+<body>
+<div class="container">
+    <div class="main">
+        <div><h1>  degrees Celsius equal to in Fahrenheit</h1></div>
+        <input id="in" type="text" placeholder="Celsius">
+        <button id="change"> change</button>
+        <button class="g1" onclick="window.location.reload()">resat</button>
+        <input id="out" type="text" readonly placeholder="Fahrenheit">
+    </div>
+   
+
+    <script>
+        let input = document.getElementById('in');
+        let output = document.getElementById('out');
+        
+        
+        document.getElementById('change').addEventListener("click",function(){
+            output.value = parseFloat(input.value*9/5+32);
+        })
+
+      
+    </script>
+</div>
+
+</body>
+</html>
